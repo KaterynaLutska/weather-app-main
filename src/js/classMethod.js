@@ -17,7 +17,7 @@ export default class myWeather {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
     return fetch(url)
       .then((response) => {
-        if (!response.ok) return alert("No City");
+        if (!response.ok) return alert("Sorry, but this city we didn't find!");
         return response.json();
       })
       .then((data) => {
